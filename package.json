@@ -1,0 +1,21 @@
+{
+  "name": "logo-mojo",
+  "version": "1.0.0",
+  "description": "CLI SVG logo maker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "svg",
+    "logo"
+  ],
+  "author": "abbyjo",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "inquirer": "8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4"
+  }
+}
