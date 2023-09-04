@@ -24,3 +24,10 @@ const questions = [
         message: "What color would you like your logo's shape to be? (Color or Hex)"
     }
 ]
+
+function init() {
+    inquirer.prompt(questions)
+    .then(answers => console.log(answers))
+}
+
+init()
