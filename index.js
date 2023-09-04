@@ -27,7 +27,12 @@ const questions = [
 
 function init() {
     inquirer.prompt(questions)
-    .then(answers => console.log(answers))
+    .then(answers => {
+        if (answers.text.length > 3) {
+            const textError = new Error("Text can't exceed 3 characters!");
+            console.log(textError)
+        }else {console.log(answers)}
+    })
 }
 
 init()
