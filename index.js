@@ -1,5 +1,7 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
+const svg = require("./svg");
+const shape = require("./shapes");
 
 const questions = [
     {
@@ -25,13 +27,20 @@ const questions = [
     }
 ]
 
+//1) generate SVG code
+//2) pass code into function to create and populate new svg file
+
+function myNewFile(svgCode) {
+    fs.writeFile('logo.svg',svgCode,function (err){
+        if (err) throw err
+        else {console.log('Generated logo.svg ★')};
+    })
+}
+
 function init() {
     inquirer.prompt(questions)
     .then(answers => {
-        if (answers.text.length > 3) {
-            const textError = new Error("Text can't exceed 3 characters!");
-            console.log(textError)
-        }else {console.log(answers)}
+        myNewFile(answers)
     })
 }
 
