@@ -52,7 +52,7 @@ function createSVGCode (data) {
 //Function to start app
 function init() {
     inquirer.prompt(questions)
-    .then(answers => {console.log(createSVGCode(answers))})
+    .then(answers => {makeNewFile(createSVGCode(answers))})
 }
 
 init()
